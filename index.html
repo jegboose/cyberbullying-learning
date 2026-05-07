@@ -1,153 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Prevent Cyberbullying</title>
-
-  <!-- Tailwind CSS Play CDN — loads Tailwind in the browser, no build step needed -->
-  <!-- The "tailwind.config" block inside this script tag lets us extend Tailwind's
-       default color palette with our own custom brand colors -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            // Our site's deep navy background color
-            navy: '#1a1a2e',
-            // The purple accent used for buttons, headings, and highlights
-            purple: {
-              accent: '#aa3bff',
-              dark:   '#7a00c2',
-              hover:  '#8e2de2',
+      <script src="https://cdn.tailwindcss.com"></script>
+      <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                navy: '#1a1a2e',
+                'purple-accent' : '#aa3bff',
+                'purple-hover' : '#8e2de2',
+              }
             }
           }
         }
-      }
-    }
-  </script>
-</head>
+      </script>
 
-<body class="bg-gray-50 text-gray-800 font-sans">
-
-  <!-- =====================================================
-       NAVBAR
-       ===================================================== -->
-  <nav class="bg-navy text-white">
-
-    <!-- Inner wrapper: centers content and sets max-width -->
-    <div class="max-w-6xl mx-auto px-4">
-
-      <!-- Flex row: site title on the left, nav links + hamburger on the right -->
-      <div class="flex items-center justify-between h-16">
-
-        <!-- Site title / logo text -->
-        <a href="index.html"
-           class="text-xl font-bold tracking-wide text-white hover:text-purple-accent transition-colors duration-200">
-          Prevent Cyberbullying
-        </a>
-
-        <!-- Desktop nav links — hidden on mobile, shown on medium screens and up -->
-        <ul class="hidden md:flex gap-8 list-none m-0 p-0">
-          <li><a href="index.html"
-                 class="text-white text-sm hover:text-purple-accent transition-colors duration-200">Home</a></li>
-          <li><a href="#"
-                 class="text-white text-sm hover:text-purple-accent transition-colors duration-200">What Is Cyberbullying</a></li>
-          <li><a href="#"
-                 class="text-white text-sm hover:text-purple-accent transition-colors duration-200">Quiz</a></li>
-          <li><a href="#"
-                 class="text-white text-sm hover:text-purple-accent transition-colors duration-200">Get Help</a></li>
-        </ul>
-
-        <!-- Hamburger button — shown only on mobile (md and above it disappears) -->
-        <!-- aria-expanded and aria-controls connect the button to the mobile menu for screen readers -->
-        <button id="menu-btn"
-                class="md:hidden flex flex-col justify-center items-center w-8 h-8 gap-1.5 focus:outline-none"
-                aria-expanded="false"
-                aria-controls="mobile-menu"
-                aria-label="Toggle navigation menu">
-          <!-- Three lines that make the hamburger icon -->
-          <span id="bar1" class="block w-6 h-0.5 bg-white transition-all duration-300"></span>
-          <span id="bar2" class="block w-6 h-0.5 bg-white transition-all duration-300"></span>
-          <span id="bar3" class="block w-6 h-0.5 bg-white transition-all duration-300"></span>
-        </button>
-
-      </div><!-- end flex row -->
-
-    </div><!-- end inner wrapper -->
-
-    <!-- Mobile dropdown menu — hidden by default, toggled by the hamburger button -->
-    <div id="mobile-menu"
-         class="hidden md:hidden bg-navy border-t border-white/10 px-4 pb-4">
-      <ul class="flex flex-col gap-3 list-none m-0 p-0 pt-3">
-        <li><a href="index.html"
-               class="block text-white text-sm py-1 hover:text-purple-accent transition-colors duration-200">Home</a></li>
-        <li><a href="#"
-               class="block text-white text-sm py-1 hover:text-purple-accent transition-colors duration-200">What Is Cyberbullying</a></li>
-        <li><a href="#"
-               class="block text-white text-sm py-1 hover:text-purple-accent transition-colors duration-200">Quiz</a></li>
-        <li><a href="#"
-               class="block text-white text-sm py-1 hover:text-purple-accent transition-colors duration-200">Get Help</a></li>
+      <title>Cyberbullying Awareness</title>
+  </head>
+  <body class="bg-navy">
+  <nav class="bg-navy h-16">
+    <div class="flex items-center justify-between max-w-6xl mx-auto px-4">
+      <a href="#" class="text-white text-xl font-bold tracking-wide">Prevent Cyberbullying</a>
+      <ul class="flex gap-8">
+        <li>
+          <a href="#" class="text-white text-sm hover:text-purple-accent transition-colors duration-200">Home</a>
+        </li>
+        <li>
+          <a href="#" class="text-white text-sm hover:text-purple-accent transition-colors duration-200">What is Cyberbullying</a>
+        </li>
+        <li>
+          <a href="#" class="text-white text-sm hover:text-purple-accent transition-colors duration-200">Quiz</a>
+        </li>
+        <li>
+          <a href="#" class="text-white text-sm hover:text-purple-accent transition-colors duration-200">Get Help</a>
+        </li>
       </ul>
-    </div><!-- end mobile menu -->
+    </div>
 
-  </nav><!-- end nav -->
+  </nav>
 
-
-  <!-- =====================================================
-       HERO SECTION
-       ===================================================== -->
-  <main id="main-content">
-
-    <section class="bg-navy text-white text-center py-24 px-4">
-
-      <!-- Eyebrow label — small text above the main headline -->
-      <p class="text-purple-accent text-sm font-semibold uppercase tracking-widest mb-4">
-        Awareness &amp; Education
-      </p>
-
-      <!-- Main headline -->
-      <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6 max-w-3xl mx-auto">
-        Stand Up Against <br />
-        <span class="text-purple-accent">Cyberbullying</span>
-      </h1>
-
-      <!-- Subheading / supporting text -->
-      <p class="text-gray-300 text-lg md:text-xl max-w-xl mx-auto mb-10">
-        Learn what cyberbullying is, how to recognize it, and how to take action
-        to protect yourself and others online.
-      </p>
-
-      <!-- Call-to-action buttons -->
-      <div class="flex flex-col sm:flex-row gap-4 justify-center">
-
-        <!-- Primary CTA button -->
-        <a href="#"
-           class="bg-purple-accent text-white font-semibold px-8 py-3 rounded-lg
-                  hover:bg-purple-hover transition-colors duration-200 text-base">
-          Learn What It Is
-        </a>
-
-        <!-- Secondary CTA — outlined style -->
-        <a href="#"
-           class="border border-white/40 text-white font-semibold px-8 py-3 rounded-lg
-                  hover:bg-white/10 transition-colors duration-200 text-base">
-          Take the Quiz
-        </a>
-
-      </div>
-
-    </section><!-- end hero -->
-
-  </main>
-
-
-  <!-- =====================================================
-       HAMBURGER MENU JAVASCRIPT
-       ===================================================== -->
-  <script src="js/navbar.js"></script>
-
-</body>
+  </body>
 </html>
