@@ -22,11 +22,11 @@
       <title>Cyberbullying Awareness</title>
   </head>
   <body class="bg-navy">
-    <header>
-        <nav class="bg-navy h-16 sticky top-0 z-10">
-        <div class="flex items-center justify-between max-w-6xl mx-auto px-4">
+    <header class="bg-navy sticky top-0 z-10">
+        <nav class="h-16">
+        <div class="flex items-center justify-between max-w-6xl mx-auto px-4 h-full">
           <a href="#" class="text-white text-xl font-bold tracking-wide">Prevent Cyberbullying</a>
-          <ul class="flex gap-8">
+          <ul class="hidden md:flex gap-8">
             <li>
               <a href="#hero" class="text-white text-sm hover:text-purple-accent transition-colors duration-200">Home</a>
             </li>
@@ -38,6 +38,28 @@
             </li>
             <li>
               <a href="#help" class="text-white text-sm hover:text-purple-accent transition-colors duration-200">Get Help</a>
+            </li>
+          </ul>
+          <button id="menu-btn" class="md:hidden text-white focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+          </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-navy px-4 pb-4">
+          <ul class="flex flex-col gap-4">
+            <li> 
+              <a class="text-white text-sm hover:text-purple-accent transition-colors duration-200" href="#hero">Home</a>
+            </li>
+            <li> 
+              <a class="text-white text-sm hover:text-purple-accent transition-colors duration-200" href="#what-is">What is Cyberbullying?</a>
+            </li>
+            <li> 
+              <a class="text-white text-sm hover:text-purple-accent transition-colors duration-200" href="#quiz">Quiz</a>
+            </li>
+            <li> 
+              <a class="text-white text-sm hover:text-purple-accent transition-colors duration-200" href="#help">Get Help</a>
             </li>
           </ul>
         </div>
@@ -180,5 +202,11 @@
         </p>
       </div>
     </footer>
+
+    <script>
+        const btn = document.getElementById('menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+      </script>
   </body>
 </html>
